@@ -22,7 +22,7 @@ func CreateScriptRunner() ScriptRunner_t {
 }
 
 func (s *ScriptRunner_t) RegisterFuncSet(funcSet interface{}) {
-	funcSet = reflect.ValueOf(funcSet)
+	s.funcSet = reflect.ValueOf(funcSet)
 }
 
 func (s *ScriptRunner_t) InstallFunc(name string, funcName string) {
