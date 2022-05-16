@@ -15,7 +15,7 @@ type ScriptRunner_t struct {
 
 func CreateScriptRunner() ScriptRunner_t {
 	return ScriptRunner_t{
-		translateTable: reflect.ValueOf(nil),
+		translateTable: reflect.ValueOf(map[string]string{}),
 		funcSet:        reflect.ValueOf(nil),
 		showlog:        false,
 	}
